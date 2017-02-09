@@ -1,4 +1,4 @@
-chrome.cookies.get({url: "https://getonce.com", name: "token"}, function (cookie) {
+chrome.cookies.get({url: "https://app.getonce.com", name: "token"}, function (cookie) {
     if (cookie !== null) {
         document.getElementById("token").value = cookie.value;
     }

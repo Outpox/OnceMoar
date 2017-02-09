@@ -8,6 +8,6 @@
   },
   "permissions": [
     "cookies",
-    "https://getonce.com/"
+    "https://app.getonce.com/"
   ]
 }
