@@ -10,7 +10,7 @@ if (isset($token) && $token != '') {
         )
     );
     $context = stream_context_create($opts);
-    $file = file_get_contents("https://getonce.com/api/v1/match/history", false, $context);
+    $file = file_get_contents("https://api.onceapi.com/v1/match/history", false, $context);
     $response = json_decode($file);
     $photosBaseUrl = $response->result->base_url;
 
@@ -21,7 +21,7 @@ if (isset($token) && $token != '') {
         $commonLikes = count($match->commons->facebook->likes);
         $viewedMe = $match->viewed_me;
         $likedMe = $match->liked_me;
-        $passedMe = $match->passedMe;
+        $passedMe = $match->passed_me;
         $connected = $match->connected;
         $lastOnline = $match->user->last_online;
 
